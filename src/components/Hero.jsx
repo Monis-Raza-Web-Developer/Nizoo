@@ -25,7 +25,7 @@ const images = [
 
   return (
     <>
-   <div className="relative w-full h-screen overflow-hidden">
+   <div className="relative w-full md:h-[90vh] h-[80vh] overflow-hidden">
    
   {/* 🔁 Carousel Image */}
   <img
@@ -37,18 +37,18 @@ const images = [
 
   {/* 🌟 Overlay Content */}
      
-  <div className="absolute inset-0 grid grid-cols-2 items-center text-white px-8 z-10">
+  <div className="absolute inset-0 grid grid-cols-1 md:grid-cols-2 md:items-center text-white px-8 z-10">
     
-    <div>
+    <div className='flex items-center'>
    
-      <p className="font-bold text-8xl">Experience the World’s Fastest Animal</p>
+      <p className="font-bold md:text-8xl sm:text-6xl text-5xl">Experience the World’s Fastest Animal</p>
      
     </div>
-    <div className="shadow-inner   rounded-2xl">
+    <div className="   ">
   <img
-    src="https://thumbs.dreamstime.com/b/cheetah-jumping-high-quality-photo-318400062.jpg"
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkY4vsyU5PWwJBimyTlmrj_I_3UXwClBUc_w&s"
     alt="Animal"
-    className="w-full h-auto rounded-2xl"
+    className="w-full h-auto  shadow-2xl rounded-4xl"
   />
 </div>
   </div>

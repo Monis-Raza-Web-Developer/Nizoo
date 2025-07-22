@@ -13,9 +13,9 @@ const Navbar = () => {
   return (
     <>
     
-    <div className='relative px-[8%] py-[1%]  flex  justify-between z-50'>
+    <div className='relative px-[8%] py-[2%]  flex  justify-between z-50'>
 <div className=' '>
-    <p className='text-2xl font-bold'><span className='text-green-600 font-bold  text-xl  pr-1  '>NiE</span>ZOO</p> </div>
+    <p className='md:text-2xl text-xl font-bold'><span className='text-green-600 font-bold  text-xl  pr-1  '>NiE</span>ZOO</p> </div>
 <div className='flex gap-5'>
     <div >
          <i className={` ${!toggle ? "ri-search-2-line text-2xl" : "hidden" }`} ></i>
@@ -25,8 +25,8 @@ const Navbar = () => {
      </div>
 </div>
 <div
-  className={`absolute  left-1/2 -translate-x-1/2   md:top-15 top-10   w-[90%] rounded-b-2xl  border border-gray-200  bg-white shadow-md text-black overflow-hidden transform transition-transform duration-700 ease-in-out  ${
-    toggle ? "translate-y-0" : "-translate-y-[135%]"
+  className={`absolute  left-1/2 -translate-x-1/2   sm:top-22 top-12   w-[90%] rounded-b-2xl  border border-gray-200  bg-white shadow-md text-black overflow-hidden transform transition-transform duration-700 ease-in-out  ${
+    toggle ? "translate-y-0" : "-translate-y-[140%]"
   }`}
 >
   <ul className="tracking-widest leading-10 text-lg p-4">

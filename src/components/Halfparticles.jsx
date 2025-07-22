@@ -21,17 +21,17 @@ const Halfparticles = () => {
           fpsLimit: 60,
           particles: {
             number: {
-              value: 500, // ✅ Reduced to 6000
+              value: 750, // ✅ Reduced to 6000
               density: {
                 enable: true,
                 area: 800,
               },
             },
             color: { value: "#0000" },
-            shape: { type: "star" },
-            opacity: { value: 0.1 },
+            shape: { type: "triangle" },
+            opacity: { value: 0.2 },
             size: {
-              value: 3,
+              value: 4,
               random: true,
             },
             move: {
@@ -42,9 +42,9 @@ const Halfparticles = () => {
             },
             links: {
               enable: true, // ✅ Linking lines enabled
-              distance: 100,
+              distance: 0,
               color: "#008000",
-              opacity: 0.1,
+              opacity: 0.5,
               width: 1,
             },
           },
