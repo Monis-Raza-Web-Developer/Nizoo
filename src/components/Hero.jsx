@@ -48,7 +48,7 @@ const images = [
   <img
     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkY4vsyU5PWwJBimyTlmrj_I_3UXwClBUc_w&s"
     alt="Animal"
-    className="w-full h-auto  shadow-2xl rounded-4xl"
+    className="w-full h-auto  opacity-50 shadow-2xl rounded-4xl"
   />
 </div>
   </div>
