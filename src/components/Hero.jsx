@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Halfparticles from './Halfparticles';
+import Spline from '@splinetool/react-spline';
+import { motion } from "motion/react"
 
 const Hero = () => {
 const images = [
@@ -10,15 +12,10 @@ const images = [
 ];
 
 
-  const [index, setIndex] = useState(0);
+
 
   // Auto-slide every 4 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % images.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, []);
+ 
 
   // Manual navigation
   
@@ -37,20 +34,28 @@ const images = [
 
   {/* 🌟 Overlay Content */}
      
-  <div className="absolute inset-0 grid grid-cols-1 md:grid-cols-2 md:items-center text-white px-8 z-10">
+  <div className="absolute inset-0 grid grid-cols-1 md:grid-cols-2 md:items-center px-5 lg:px-0 text-white px-auto  ">
     
-    <div className='flex items-center'>
+    <div className=' lg:flex hidden w-full h-full'>
    
-      <p className="font-bold md:text-8xl sm:text-6xl text-5xl">Experience the World’s Fastest Animal</p>
+         <Spline className='' scene="https://prod.spline.design/DJ9eJB-es1uoENZ1/scene.splinecode" />
      
     </div>
-    <div className="   ">
+     <div className='lg:hidden flex justify-center items-center  font-bold   w-full h-full text-5xl text-center '>
+   
+      <p>Experience the fastest animal on earth</p>
+     
+    </div>
+    <motion.div className=" px-5 " initial={{ scale: 0 }} animate={{ scale: 1 }}
+    transition={{duration:1}}
+    
+    >
   <img
     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkY4vsyU5PWwJBimyTlmrj_I_3UXwClBUc_w&s"
     alt="Animal"
-    className="w-full h-auto  opacity-50 shadow-2xl rounded-4xl"
+    className="w-full h-auto  rounded-2xl"
   />
-</div>
+</motion.div>
   </div>
 </div>
 

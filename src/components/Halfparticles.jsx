@@ -21,7 +21,7 @@ const Halfparticles = () => {
           fpsLimit: 60,
           particles: {
             number: {
-              value: 750, // ✅ Reduced to 6000
+              value: 100, // ✅ Reduced to 6000
               density: {
                 enable: true,
                 area: 800,
