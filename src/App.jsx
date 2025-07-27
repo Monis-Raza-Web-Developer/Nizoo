@@ -12,6 +12,8 @@ import { motion } from "motion/react"
 import { Application } from "@splinetool/runtime";
 import Rare from './components/Rare';
 import Footer from './components/Footer';
+import Adopt from './components/Adopt';
+import Visitplan from './components/Visitplan';
 
 function App() {
 
@@ -25,9 +27,10 @@ function App() {
     <Navbar/>
     <Hero/>
       <Cards/>
-
-<Rare/>
+<Adopt/>
+<Visitplan/>
       <Footer/>
+
      
     </>
   )

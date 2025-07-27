@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion, scale } from 'framer-motion';
 
 const Cards = () => {
  const cards = [
@@ -58,7 +59,7 @@ const Cards = () => {
      {cards.map((card, index) => (
         <div
           key={index}
-          className="break-inside-avoid mb-4 bg-white rounded-lg  overflow-hidden"
+          className="break-inside-avoid mb-4 bg-white   overflow-hidden"
         data-aos={directions[index % directions.length]} // 👈 dynamic direction
       data-aos-offset="100"
       data-aos-delay={`${index * 50}`} // 👈 slightly staggered delay
@@ -75,6 +76,13 @@ const Cards = () => {
             <p className="text-md text-gray-600 p-2 ">
               {card.description}
             </p>
+        <motion.button
+  className=" text-green-700 font-semibold text-md flex items-center gap-5"
+  whileHover={{ scale: 1.1 }}
+  transition={{ type: "spring", stiffness: 1000 }}
+>
+  Explore now <i className="ri-arrow-right-long-line"></i>
+</motion.button>
           </div>
         </div>
       ))}
