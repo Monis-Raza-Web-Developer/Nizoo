@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react'
 import Halfparticles from './Halfparticles';
 import Spline from '@splinetool/react-spline';
 import { motion } from "motion/react"
+import Cards from './Cards';
+import Adopt from './Adopt';
+import Visitplan from './Visitplan';
 
 const Hero = () => {
 const images = [
@@ -47,18 +50,19 @@ const images = [
      
     </div>
     <motion.div className=" px-5 " initial={{ scale: 0 }} animate={{ scale: 1 }}
-    transition={{duration:1}}
+    transition={{duration:2}}
     
     >
   <img
-    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkY4vsyU5PWwJBimyTlmrj_I_3UXwClBUc_w&s"
-    alt="Animal"
-    className="w-full h-auto  rounded-2xl"
+    src="./hero1.png"
+    className="w-full h-auto drop-shadow-2xl  rounded-2xl"
   />
 </motion.div>
   </div>
 </div>
-
+<Cards/>
+<Adopt/>
+<Visitplan/>
 </>
 
   );

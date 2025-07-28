@@ -14,6 +14,9 @@ import Rare from './components/Rare';
 import Footer from './components/Footer';
 import Adopt from './components/Adopt';
 import Visitplan from './components/Visitplan';
+import Contact from './pages/Contact';
+import About from './pages/About';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
 
@@ -24,14 +27,19 @@ function App() {
   return (
     <>
    { AOS.init()}
-    <Navbar/>
-    <Hero/>
-      <Cards/>
-<Adopt/>
-<Visitplan/>
+     <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Hero />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
+    
       <Footer/>
 
      
+    
     </>
   )
 }

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import {  Routes, Route, Link } from 'react-router-dom';
 
 
 const Navbar = () => {
@@ -26,15 +27,17 @@ const Navbar = () => {
 </div>
 <div
   className={`absolute  left-1/2 -translate-x-1/2   sm:top-22 top-12   w-[90%] rounded-b-2xl  border border-gray-200  bg-white shadow-md text-black overflow-hidden transform transition-transform duration-700 ease-in-out  ${
-    toggle ? "translate-y-0" : "-translate-y-[140%]"
+    toggle ? "translate-y-0" : "-translate-y-[160%]"
   }`}
 >
   <ul className="tracking-widest leading-10 text-lg p-4">
-    <li>Home</li>
-    <li>About</li>
-    <li>Contact</li>
-    <li>Booking</li>
-    <li>Animals</li>
+  
+   
+    <li><Link to="/">Home</Link></li>
+    <li><Link to="/about">About </Link></li>
+    <li><Link to="/contact">Contact </Link></li>
+    
+ 
   </ul>
 </div>
     </div>
