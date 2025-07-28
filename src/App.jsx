@@ -17,6 +17,8 @@ import Visitplan from './components/Visitplan';
 import Contact from './pages/Contact';
 import About from './pages/About';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Carddetail from './pages/Carddetail';
+import Animal from './pages/Animal';
 
 function App() {
 
@@ -33,6 +35,8 @@ function App() {
         <Route path="/" element={<Hero />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+           <Route path="/animals" element={<Animal />} />
+        <Route path="/animals/:id" element={<Carddetail />} />
       </Routes>
     </BrowserRouter>
     

@@ -1,55 +1,10 @@
 import React from 'react'
 import { motion, scale } from 'framer-motion';
+import { cards } from '../data/Cardsdata';
+import { Link } from 'react-router-dom';
 
 const Cards = () => {
- const cards = [
-  {
-    title: "Card 1",
-    description:"djskhfsdkhfkhefsdihrefnkjdshfuidsksiufhsdifhsd",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWIE9vIClxqAVC5K57z1YbkiHetnaGkdclMg&s",
-  },
-  {
-    title: "Card 2",
-    description:"djskhfsdkhfkhefsdihrefnkjdshfuidsksiufhsdifhsddfjjdsiuyefuhsuhfdsjgut6ew",
-    img: "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/14632/production/_111860538_gettyimages-1129310243.jpg",
-  },
-  {
-    title: "Card 3",
-    description:"djskhfsdkhfkhefsdihrefnkjdshfuidsksiuf",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRXzH-KGluc5w-r_ErW4EnftgwcXB_9meGgw&s",
-  },
-  {
-    title: "Card 4",
-    description:"djs khfsdkhf khefsdihref nkjdshfu idsksiu fhsdif hsddji fuhkjhf uiyfhui ytrrjfz dhiuy chsd",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzm2gUorimwhG8SPgjS8Wzcy2ZyhIuz0_juQ&s",
-  },
-  {
-    title: "Card 5",
-    description:"djsk hfsdkhfk hefsdihrefnkj dshfuidsks iufhs difhsd  nudhuidsfhhuh udyf7sf uyeh iue ",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKNVdGCBd2nvchQVYHK_WdUsJdNKqXBBTynw&s",
-  },
-  {
-    title: "Card 6",
-    description:"djskhfsdkhfkhefsdihrefnkjdshfuidsksiufhsd",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSVEgwSSnatufszHrPw6SC9RCIyA6mge23lg&s",
-  },
-  {
-    title: "Card 7",
-    description:"djskhfsdkhfkhe fsdih refnkjdshf uidsksiuf hsdifhsdji ifji dfhuif",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSsbJmsvZLCmfMg9ySMr0xsXSZ-0DMuhDtJw&s",
-  },
-  {
-    title: "Card 8",
-    description:"dj skhfsd khfkhefsdihr efnkjdshfuids ksiufhsdifh sddhdsiu hiedsfyhus fguydguys fgsuyfg uysdg uysdg fuyds g   fusdfg usdfgudysgf dsfsdsd sddfsd",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYJQYeipHrBIJ31lUl8T5tKjyuRFszCU7c7A&s",
-  },
-  {
-    title: "Card 9",
-    description:"djsk hfsdkhfkh efsdihre fnkjds hfuidsksiuf h sdifhs dfhshfu isdfhsdfusfhs idufhsdeiufh wuef usifhd",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmXhtdddYGmdbTHZ4YsmOp8lw2pS46M51sDw&s",
-  },
-
-];
+ 
   const directions = ['fade-up', 'fade-down', 'fade-left', 'fade-right', 'zoom-in', 'zoom-out']; 
   return (
     <>
@@ -74,14 +29,15 @@ const Cards = () => {
           <div className="p-4">
             <h2 className="text-lg font-semibold">{card.title}</h2>
             <p className="text-md text-gray-600 p-2 ">
-              {card.description}
+              {card.description?.slice(0,150)}
             </p>
         <motion.button
   className=" text-green-700 font-semibold text-md flex items-center gap-5"
   whileHover={{ scale: 1.1 }}
   transition={{ type: "spring", stiffness: 1000 }}
 >
-  Explore now <i className="ri-arrow-right-long-line"></i>
+  <Link key={card.id} to={`/animals/${card.id}`}> Explore now <i className="ri-arrow-right-long-line"></i></Link>
+ 
 </motion.button>
           </div>
         </div>

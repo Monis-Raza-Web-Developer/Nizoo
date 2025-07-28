@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <>
     
-    <div className='relative px-[8%] py-[2%]  flex  justify-between z-50'>
+    <div className='relative px-[8%] py-[2%]  flex  justify-between z-50 border-b-2 border-green-500'>
 <div className=' '>
     <p className='md:text-2xl text-xl font-bold'><span className='text-green-600 font-bold  text-xl  pr-1  '>NiE</span>ZOO</p> </div>
 <div className='flex gap-5'>
@@ -36,7 +36,7 @@ const Navbar = () => {
     <li><Link to="/">Home</Link></li>
     <li><Link to="/about">About </Link></li>
     <li><Link to="/contact">Contact </Link></li>
-    
+     <li><Link to="/animals">Animals </Link></li>
  
   </ul>
 </div>
