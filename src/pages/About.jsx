@@ -33,10 +33,10 @@ const About = () => {
            <motion.div
         initial={{ x: 200, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 1 }} className="absolute left-150 top-25 text-6xl text-green-800 ">
+        transition={{ duration: 1 }} className="md:absolute left-150 top-25 md:text-6xl text-4xl text-green-800 ">
               <h2 >About Us</h2>
           </motion.div>
-            <p className="text-gray-600 ">
+            <p className="text-gray-600 md:mt-0  mt-5">
               Founded in 2024, our company delivers scalable and innovative digital
               solutions. Our goal is simple — empower businesses through technology.
             </p>
